@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Healthcare Suite" parallel="tests" thread-count="2">
+
+	<listeners>
+    	<listener class-name="com.healthcare.listeners.TestListener"/>
+  	</listeners>
+
+	<test name="Healthcare Tests">
+	
+		<!-- <parameter name="browser" value="firefox"/> -->
+
+		<classes>
+
+			
+				<!-- <class name="com.healthcare.tests.LoginTest"/> -->
+			    <class name="com.healthcare.tests.BookAppointmentTest"/> 
+
+		</classes>
+
+	</test>
+
+</suite>
