@@ -1,9 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage('Check') {
+        stage('Debug') {
             steps {
-                echo 'Jenkinsfile detected!'
+                echo 'Jenkinsfile is executing'
             }
         }
     }
