@@ -1,7 +1,12 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'   // must match name in Jenkins config
+    }
+
     stages {
+
         stage('Checkout') {
             steps {
                 git 'https://github.com/swapnak1512/HealthCareAutomation.git'
