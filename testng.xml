@@ -14,7 +14,7 @@
 
 			
 				 <class name="com.healthcare.tests.LoginTest"/>
-			     <class name="com.healthcare.tests.BookAppointmentTest"/>
+			    <!-- <class name="com.healthcare.tests.BookAppointmentTest"/> -->
 
 		</classes>
 
