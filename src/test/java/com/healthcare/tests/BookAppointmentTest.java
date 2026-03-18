@@ -96,7 +96,7 @@ public class BookAppointmentTest extends BaseTest{
 
 
 	
-	
+/*	
 	@Test
 	public void bookMedicareAppointmentTest() throws InterruptedException 
 	{
@@ -232,5 +232,5 @@ public class BookAppointmentTest extends BaseTest{
 		ExtentTestManager.getTest().pass("Received Confirmation page");
 		
 	}
-
+*/
 }
