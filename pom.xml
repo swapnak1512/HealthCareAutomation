@@ -9,12 +9,13 @@
 
   <name>maven-archetype-quickstart</name>
   <url>http://maven.apache.org</url>
-
-  <suiteXmlFiles>
-    <suiteXmlFile>testng.xml</suiteXmlFile>
-  </suiteXmlFiles>
+  <configuration>
+  	<suiteXmlFiles>
+   	 <suiteXmlFile>testng.xml</suiteXmlFile>
+  	</suiteXmlFiles>
+  </configuration>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
