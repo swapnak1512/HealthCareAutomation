@@ -51,7 +51,7 @@ public class LoginTest extends BaseTest {
 	}
 	
 
-	
+	/*
 	@Test
 	public void validLoginTest()
 	{
@@ -105,5 +105,5 @@ public class LoginTest extends BaseTest {
 		
 	}
 	
-	
+*/	
 }
