@@ -16,7 +16,9 @@
    <build>
     <plugins>
       <plugin>
-        <configuration>
+	 	 <groupId>org.apache.maven.plugins</groupId>
+     	 <artifactId>maven-compiler-plugin</artifactId>
+         <configuration>
 			<suiteXmlFiles>
     			<suiteXmlFile>testng.xml</suiteXmlFile>
 			</suiteXmlFiles>
