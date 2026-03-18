@@ -19,22 +19,6 @@ public class LoginPage {
 	
 	
 	
-	/*
-	public void enterUsername(String user)
-	{
-		driver.findElement(username).sendKeys(user);
-	}
-	
-	public void enterPassword(String pwd)
-	{
-		driver.findElement(password).sendKeys(pwd);
-	}
-	
-	public void clickLogin()
-	{
-		driver.findElement(loginButton).click();
-	}
-	*/
 	public void login(String user, String pwd)
 	{
 		driver.findElement(username).sendKeys(user);
@@ -46,7 +30,7 @@ public class LoginPage {
 	public void verifyErrorMessage()
 	{
 		
-		Assert.assertTrue(driver.findElement(errorLoginMessage).isDisplayed(), "The element should be displayed.");
+		Assert.assertTrue(driver.findElement(errorLoginMessage).isDisplayed(), "Error message is not displayed.");
 
 	}
 	

@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.healthcare.base.BaseTest;
@@ -18,9 +19,8 @@ import com.healthcare.reports.ExtentTestManager;
 
 public class LoginTest extends BaseTest {
 	
-	/*
 	@Test(dataProvider="loginData", dataProviderClass=TestDataProvider.class)
-	public void loginTest(String username,String password) throws InterruptedException
+	public void loginTest(String username,String password,String expectedResult) throws InterruptedException
 	{
 		HomePage hp = new HomePage(driver);
 		LoginPage lp = new LoginPage(driver);
@@ -30,39 +30,26 @@ public class LoginTest extends BaseTest {
 		ExtentTestManager.getTest().info("Clicked Make Appointment");
 
 	
-		//lp.enterUsername("John Doe");
-		//lp.enterPassword("ThisIsNotAPassword");
-		//ExtentTestManager.getTest().info("Entered credentials");
-
-		//lp.clickLogin();
-		//ExtentTestManager.getTest().pass("Login successful");
-
-		//lp.login("John Doe", "ThisIsNotAPassword");
-		//ExtentTestManager.getTest().pass("Login successful");
-		
 		lp.login(username, password);
 		
 		
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ap.makeApptHeader));
 		
+		if (expectedResult.equalsIgnoreCase("SUCCESS")) {
+				WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));
+				wait.until(ExpectedConditions.visibilityOfElementLocated(ap.makeApptHeader));
 		
-		if(ap.verifyMakeAppointmentPage() == true)
-		{
-			ExtentTestManager.getTest().pass("Login successful");
+				boolean isAppointmentPageVisible = ap.verifyMakeAppointmentPage();
+				Assert.assertTrue(isAppointmentPageVisible, "Appointment page is not visible");
+				ExtentTestManager.getTest().pass("Login successful");
+			}
+		else {
+				WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));
+				wait.until(ExpectedConditions.visibilityOfElementLocated(lp.errorLoginMessage));
+		     	lp.verifyErrorMessage();
+			    ExtentTestManager.getTest().pass("Login unsuccessful, ErrorMessage is displayed for invalid credentials");
 		}
-		
-		else
-		{
-			lp.verifyErrorMessage();
-			ExtentTestManager.getTest().pass("Login unsuccessful, ErrorMessage is displayed for invalid credentials");
-		}
-		
-		
-		
-	
 	}
-	*/
+	
 
 	
 	@Test
@@ -99,8 +86,6 @@ public class LoginTest extends BaseTest {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lp.errorLoginMessage));
 		
-		
-
 		lp.verifyErrorMessage();
 		ExtentTestManager.getTest().pass("Login unsuccessful, ErrorMessage is displayed for invalid credentials");
 		

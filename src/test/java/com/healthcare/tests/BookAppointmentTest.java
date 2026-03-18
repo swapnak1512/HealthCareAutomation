@@ -37,14 +37,6 @@ public class BookAppointmentTest extends BaseTest{
 		hp.clickMakeAppointment();
 		ExtentTestManager.getTest().info("Clicked Make Appointment");
 
-	/*	
-		lp.enterUsername("John Doe");
-		lp.enterPassword("ThisIsNotAPassword");
-		ExtentTestManager.getTest().info("Entered credentials");
-
-		lp.clickLogin();
-		ExtentTestManager.getTest().pass("Login successful");
-	*/
 		lp.login(username, password);
 		ExtentTestManager.getTest().pass("Login successful");
 	
@@ -116,14 +108,6 @@ public class BookAppointmentTest extends BaseTest{
 		hp.clickMakeAppointment();
 		ExtentTestManager.getTest().info("Clicked Make Appointment");
 
-/*		
-		lp.enterUsername("John Doe");
-		lp.enterPassword("ThisIsNotAPassword");
-		ExtentTestManager.getTest().info("Entered credentials");
-
-		lp.clickLogin();
-		ExtentTestManager.getTest().pass("Login successful");
-	*/
 		lp.login("John Doe", "ThisIsNotAPassword");
 		ExtentTestManager.getTest().pass("Login successful");
 	
@@ -168,14 +152,6 @@ public class BookAppointmentTest extends BaseTest{
 
 		ExtentTestManager.getTest().info("Clicked Make Appointment");
 
-/*		
-		lp.enterUsername("John Doe");
-		lp.enterPassword("ThisIsNotAPassword");
-		ExtentTestManager.getTest().info("Entered credentials");
-
-		lp.clickLogin();
-		ExtentTestManager.getTest().pass("Login successful");
-	*/
 		lp.login("John Doe", "ThisIsNotAPassword");
 		ExtentTestManager.getTest().pass("Login successful");
 		
@@ -223,14 +199,6 @@ public class BookAppointmentTest extends BaseTest{
 
 		ExtentTestManager.getTest().info("Clicked Make Appointment");
 
-	/*		
-		lp.enterUsername("John Doe");
-		lp.enterPassword("ThisIsNotAPassword");
-		ExtentTestManager.getTest().info("Entered credentials");
-
-		lp.clickLogin();
-		ExtentTestManager.getTest().pass("Login successful");
-	*/
 		lp.login("John Doe", "ThisIsNotAPassword");
 		ExtentTestManager.getTest().pass("Login successful");
 		
